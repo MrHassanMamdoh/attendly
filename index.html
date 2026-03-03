@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendly | Student System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo-top-container">
+            <img src="unnamed (2).png" alt="Logo 1" />
+            <img src="Attendly.png" alt="Logo 2" />
+        </div>
+
+        <div class="auth-card">
+            <div class="brand-header">
+                <h1>Attendly</h1>
+                <h2>Hassan Mamdouh</h2>
+                <h2>الصف الثالث الثانوي علمي رياضه</h2>
+            </div>
+
+            <form id="attendlyForm">
+                <select id="centerName" required>
+                    <option value="" disabled selected>اختر السنتر</option>
+                    <option value="01">يونايتد</option>
+                    <option value="02">كابيتال</option>
+                    <option value="03">نوبل مجموعة واحد</option>
+                    <option value="04">نوبل مجموعة اتنين</option>
+                    <option value="05">الصخره</option>
+                    <option value="06">الاصدقاء</option>
+                </select>
+
+                <div class="form-group">
+                    <label for="examNumber">رقم الكشف</label>
+                    <input type="text" id="examNumber" placeholder="Ex: 12345" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phoneNumber">رقم الطالب او رقم ولي الامر</label>
+                    <input type="tel" id="phoneNumber" placeholder="01xxxxxxxxx" required>
+                </div>
+
+                <button type="submit" class="btn-submit">اعرض الاكونت</button>
+            </form>
+
+            <div id="resultBox" class="result-box" style="margin-top: 1rem; display:none;">
+                <p>الاسم: <span id="studentName"></span></p>
+                <p>الكود: <span id="studentCode"></span></p>
+                <p>الباسورد: <span id="accessCode" style="font-weight:bold; font-size:1rem;"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- استدعاء السكريبت بعد تحميل DOM -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
