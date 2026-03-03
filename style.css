@@ -17,7 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/Ramdan.png');
+    background-image: url('Ramdan.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -160,4 +160,5 @@ select:focus {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
