@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Sending to function:", { groupId, kashfNumber, phone });
 
     // ✅ فحص القيم قبل الإرسال
-    if (!groupId  !phone) {
+    if (!groupId || !kashfNumber || !phone) {
       showResult(false, "اكمل كل الحقول");
       return;
     }
@@ -79,5 +79,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-
-
