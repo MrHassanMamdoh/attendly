@@ -12,7 +12,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const functions = getFunctions(app); 
-const getStudentData = httpsCallable(functions, "getStudentata");
+const getStudentData = httpsCallable(functions, "getStudentData");
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("attendlyForm");
@@ -79,4 +79,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
 
