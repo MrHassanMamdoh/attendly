@@ -12,8 +12,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const functions = getFunctions(app); 
-const createStudentAccount = httpsCallable(functions, "createStudentAccount");
-
+const getStudentData = httpsCallable(functions, "getStudentData");
 document.addEventListener("DOMContentLoaded", () => {
 
   const form = document.getElementById("attendlyForm");
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Sending to function:", { groupId, kashfNumber, phone });
 
     // ✅ فحص القيم قبل الإرسال
-    if (!groupId || !kashfNumber || !phone) {
+    if (!groupId  !phone) {
       showResult(false, "اكمل كل الحقول");
       return;
     }
@@ -45,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
 
       // ✅ أهم نقطة: نبعت object مباشر (من غير data:)
-      const result = await createStudentAccount({
+      const result = await getStudentData({
         groupId,
         kashfNumber,
         phone
